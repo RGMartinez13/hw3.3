@@ -1,15 +1,15 @@
 #include <iostream>
-#include <cmath>    // for pow() function
+#include <iomanip>  
 using namespace std;
 int main()
 {
     const float PI = 3.14159;
     int user_choice;
 
-    cout << "\nArchitect Area Calculator Calculator\n"
+    cout << "\nGeometry Calculator\n"
          << "   1. Calculate the Area of a Rectangle\n"
-         << "   2. Calculate the Area of a Circle\n"
-         << "   3. Calculate the Area of a Triangle\n"
+         << "   2. Calculate the Area of a Triangle\n"
+         << "   3. Calculate the Area of a Circle\n"
          << "   4. Quit\n"
          << "\nEnter you choice (1-4): ";
     cin >> user_choice;
@@ -53,31 +53,10 @@ int main()
 
       
         case 2:
-        int radius;
-            cout << "Circle ";
-            cout << "What is the radius: ";
-            cin >> radius;
 
-            if (radius < 0)
-            {
-                cout << "We're sorry. \nThe radius must be "
-                     << "a positive number.\n"
-                     << "Rerun the program and try again.\n" 
-                     << endl;
-            }
-            else
-            {
-                area = PI * radius * radius;
-
-                cout << "The area of the circle is  " 
-                     <<  area << endl;
-            }
-            break;
-            
-        case 3:
-            float height,
+        float height,
                   base;
-            cout << "Triangle ";
+
             cout << "What is base base? ";
             cin >> base;
 
@@ -111,7 +90,31 @@ int main()
             }
             break;
 
-        case 4:
+        case 3:
+
+                int radius;
+
+            cout << "What is the radius: ";
+            cin >> radius;
+
+            if (radius < 0)
+            {
+                cout << "We're sorry. \nThe radius must be "
+                     << "a positive number.\n"
+                     << "Rerun the program and try again.\n" 
+                     << endl;
+            }
+            else
+            {
+                area = PI * radius * radius;
+
+                cout << "The area of the circle is  " 
+                     <<  area << endl;
+            }
+            break;
+            
+            
+            case 4:
             cout << "Good-bye." << endl;
             break;
     
