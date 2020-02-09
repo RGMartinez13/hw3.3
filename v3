@@ -6,12 +6,13 @@ int main()
     const float PI = 3.14159;
     int user_choice;
 
-    cout << "\nGeometry Calculator\n"
-         << "   1. Calculate the Area of a Rectangle\n"
-         << "   2. Calculate the Area of a Triangle\n"
-         << "   3. Calculate the Area of a Circle\n"
+    cout << "Architect Area Calculator:"
+         << "\n*************************\n" 
+         << "   1. Rectangle\n"
+         << "   2. Triangle\n"
+         << "   3. Circle\n"
          << "   4. Quit\n"
-         << "\nEnter you choice (1-4): ";
+         << "\nPlease enter a menu item (1-4): ";
     cin >> user_choice;
     cout << endl;
 
