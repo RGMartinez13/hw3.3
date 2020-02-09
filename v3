@@ -23,19 +23,22 @@ int main()
         case 1:
         
         float width, length;
-            cout << "Rectangle ";
-            cout << "What is the length? " << endl;
+            cout << "Rectangle " << endl;
+            cout << "Please enter the length > " << endl;
             cin >> length;
 
             if (length > 0) 
             {
-                cout << "What is the width? " << endl;
+                cout << "Please enter the width > " << endl;
                 cin >> width;
 
                 if (width > 0) {
                     area = length * width;
-                    cout << "The area of rectangle is " 
-                         << area 
+                    
+                    cout << fixed << showpoint << setprecision(2);
+                    
+                    cout << "Area =  " 
+                         << area << " sq/ft"
                          << endl;
                 }
                 else {
@@ -57,21 +60,25 @@ int main()
 
         float height,
                   base;
-
-            cout << "What is the base? ";
+            cout << "Triangle " << endl;
+            cout << "Please enter the base > ";
             cin >> base;
 
             if (base > 0)
             {
-                cout << "What is the height? ";
+                cout << "Please enter the height > ";
                 cin >> height;
 
                 if (height > 0) 
                 {
                     area = (base * height) * .5;
-                    cout << "Area of triangle is " 
-                         << area 
+                   
+                    cout << fixed << showpoint << setprecision(2);
+                    
+                    cout << "Area = " 
+                         << area << " sq/ft"
                          << endl;
+                         
                 }
                 else 
                 {
@@ -94,8 +101,8 @@ int main()
         case 3:
 
                 int radius;
-
-            cout << "What is the radius: ";
+            cout << "Circle" << endl;
+            cout << "Please enter the radius > ";
             cin >> radius;
 
             if (radius < 0)
@@ -108,9 +115,12 @@ int main()
             else
             {
                 area = PI * radius * radius;
+               
+                cout << fixed << showpoint << setprecision(2);
 
-                cout << "The area of the circle is  " 
-                     <<  area << endl;
+                cout << "Area =  " 
+                     << area << " sq/ft" 
+                     << endl;
             }
             break;
             
