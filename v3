@@ -6,9 +6,9 @@ int main()
     const float PI = 3.14159;
     int user_choice;
 
-    cout << "\nGeometry Calculator\n"
-         << "   1. Calculate the Area of a Cricle\n"
-         << "   2. Calculate the Area of a Rectangle\n"
+    cout << "\nArchitect Area Calculator Calculator\n"
+         << "   1. Calculate the Area of a Rectangle\n"
+         << "   2. Calculate the Area of a Circle\n"
          << "   3. Calculate the Area of a Triangle\n"
          << "   4. Quit\n"
          << "\nEnter you choice (1-4): ";
@@ -20,30 +20,9 @@ int main()
         float area;
 
         case 1:
-            int radius;
-
-            cout << "What is the radius: ";
-            cin >> radius;
-
-            if (radius < 0)
-            {
-                cout << "We're sorry. \nThe radius must be "
-                     << "a positive number.\n"
-                     << "Rerun the program and try again.\n" 
-                     << endl;
-            }
-            else
-            {
-                area = PI * pow(radius, 2);
-
-                cout << "The area of the circle is  " 
-                     <<  area << endl;
-            }
-            break;
-
-        case 2:
-            float width, length;
-
+        
+        float width, length;
+            cout << "Rectangle ";
             cout << "What is the length? " << endl;
             cin >> length;
 
@@ -72,10 +51,33 @@ int main()
             }
             break;
 
+      
+        case 2:
+        int radius;
+            cout << "Circle ";
+            cout << "What is the radius: ";
+            cin >> radius;
+
+            if (radius < 0)
+            {
+                cout << "We're sorry. \nThe radius must be "
+                     << "a positive number.\n"
+                     << "Rerun the program and try again.\n" 
+                     << endl;
+            }
+            else
+            {
+                area = PI * radius * radius;
+
+                cout << "The area of the circle is  " 
+                     <<  area << endl;
+            }
+            break;
+            
         case 3:
             float height,
                   base;
-
+            cout << "Triangle ";
             cout << "What is base base? ";
             cin >> base;
 
